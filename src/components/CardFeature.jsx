@@ -14,3 +14,4 @@ export default function CardFeature({ icone, titulo, descricao, tag }) {
     </div>
   );
 }
+
