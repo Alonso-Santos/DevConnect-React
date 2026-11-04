@@ -1,9 +1,7 @@
-import './Footer.css';
-
-export default function Footer() {
+export default function Footer({ autor }) {
   return (
-    <footer className="footer">
-      <p>Projeto em Desenvolvimento &nbsp;·&nbsp; EFG / UFG — 2026</p>
+    <footer className="mt-12 text-center text-slate-500 text-xs py-4 border-t border-slate-200">
+      <p>Desenvolvido por <strong>{autor}</strong> | EFG / UFG - 2026</p>
     </footer>
   );
 }

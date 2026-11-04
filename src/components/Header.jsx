@@ -1,21 +1,8 @@
-import './Header.css';
-
-export default function Header() {
+export default function Header({ titulo, subtitulo }) {
   return (
-    <header className="header">
-      <div className="header-inner">
-        <div className="header-badge">
-          <span className="header-badge-dot"></span>
-          Escola do Futuro de Goiás
-        </div>
-        <h1 className="header-title">
-          Dev<span>Connect</span>
-        </h1>
-        <p className="header-desc">
-          Plataforma para Desenvolvedores — conectando estudantes da EFG com
-          oportunidades no mercado de tecnologia.
-        </p>
-      </div>
+    <header className="bg-indigo-600 text-white py-6 px-4 text-center rounded-b-xl shadow-md mb-8">
+      <h1 className="text-3xl font-bold">{titulo}</h1>
+      <p className="text-indigo-100 mt-2 text-sm md:text-base">{subtitulo}</p>
     </header>
   );
 }
