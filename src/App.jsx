@@ -3,6 +3,13 @@ import Header from "./components/Header";
 import CardFeature from "./components/CardFeature";
 import Footer from "./components/Footer";
 
+// Ícones personalizados
+import iconComponentizacao from "./assets/icons/componentizacao.png";
+import iconTailwind from "./assets/icons/tailwind.png";
+import iconVite from "./assets/icons/vite.png";
+import iconReact from "./assets/icons/react.png";
+import iconVagas from "./assets/icons/vagas.png";
+
 export default function App() {
   // Estado reativo: Contador de curtidas (recurso da Aula 07 preservado)
   const [curtidas, setCurtidas] = useState(0);
@@ -11,32 +18,64 @@ export default function App() {
   const [novoTitulo, setNovoTitulo] = useState("");
   const [novaDescricao, setNovaDescricao] = useState("");
 
-  // Lista dinâmica de recursos com estado reativo + props
+  // Lista dinâmica de recursos com ícones personalizados + props
   const [recursos, setRecursos] = useState([
     {
       id: 1,
-      icone: "🧩",
+      icone: (
+        <img
+          src={iconComponentizacao}
+          alt="Componentização"
+          className="w-9 h-9 object-contain"
+        />
+      ),
       titulo: "Componentização",
       descricao: "Código modular dividindo a interface em pequenos blocos fáceis de manter.",
       tag: "React"
     },
     {
       id: 2,
-      icone: "🎨",
+      icone: (
+        <img
+          src={iconTailwind}
+          alt="Tailwind CSS"
+          className="w-9 h-9 object-contain"
+        />
+      ),
       titulo: "Tailwind CSS",
       descricao: "Estilização utilitária e responsiva aplicada diretamente nos componentes.",
       tag: "CSS"
     },
     {
       id: 3,
-      icone: "⚡",
+      icone: (
+        <div className="flex items-center gap-1.5">
+          <img
+            src={iconVite}
+            alt="Vite"
+            className="w-8 h-8 object-contain"
+          />
+          <span className="text-slate-400 font-bold text-xs">+</span>
+          <img
+            src={iconReact}
+            alt="React"
+            className="w-8 h-8 object-contain"
+          />
+        </div>
+      ),
       titulo: "Vite + React",
       descricao: "Servidor local ultrarrápido e estrutura SPA moderna.",
       tag: "Build"
     },
     {
       id: 4,
-      icone: "💼",
+      icone: (
+        <img
+          src={iconVagas}
+          alt="DevConnect Vagas"
+          className="w-9 h-9 object-contain"
+        />
+      ),
       titulo: "DevConnect Vagas",
       descricao: "Conectando estudantes da EFG com oportunidades no mercado de tecnologia.",
       tag: "Carreira"
