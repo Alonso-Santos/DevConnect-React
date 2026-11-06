@@ -65,7 +65,7 @@ export default function App() {
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 pb-8">
       {/* 1. Header modularizado recebendo dados via props */}
       <Header
-        titulo="DevConnect · Meu Projeto Front-end"
+        titulo="DevConnect · @Alonso-Santos"
         subtitulo="Componentização Reutilizável, Props e Reatividade na Prática | EFG / UFG"
       />
 
@@ -138,7 +138,7 @@ export default function App() {
       </main>
 
       {/* 3. Footer institucional recebendo autor via props */}
-      <Footer autor="Alonso Santos" />
+      <Footer autor="@Alonso-Santos" />
     </div>
   );
 }
